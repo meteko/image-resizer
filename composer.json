@@ -1,7 +1,7 @@
 {
     "description": "Automatically resize images on upload. To save disk space and bandwidth",
     "type": "neos-package",
-    "name": "meteko/imageresizer",
+    "name": "meteko/image-resizer",
     "require": {
         "neos/media": "*"
     },
