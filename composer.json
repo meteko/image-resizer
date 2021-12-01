@@ -1,0 +1,18 @@
+{
+    "description": "Automatically resize images on upload. To save disk space and bandwidth",
+    "type": "neos-package",
+    "name": "meteko/imageresizer",
+    "require": {
+        "neos/media": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Meteko\\ImageResizer\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Meteko.ImageResizer"
+        }
+    }
+}
