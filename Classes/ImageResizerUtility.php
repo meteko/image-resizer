@@ -4,6 +4,7 @@ namespace Meteko\ImageResizer;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Media\Domain\Model\AssetInterface;
+use Neos\Media\Domain\Model\ImageVariant;
 use Neos\Media\Domain\Model\ThumbnailConfiguration;
 use Neos\Media\Domain\Service\AssetService;
 use Neos\Media\Domain\Service\ThumbnailService;
@@ -35,6 +36,10 @@ class ImageResizerUtility
 
     public function resize(AssetInterface $asset)
     {
+        if ($asset instanceof ImageVariant) {
+            return;
+        }
+
         $configuration = $this->configuration;
         $sourceMediaType = MediaTypes::parseMediaType($asset->getMediaType());
 
